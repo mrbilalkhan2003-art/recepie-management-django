@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{page}}</title>
-    <style>table, th, td {
-  border: 1px solid black;
-}</style>
-</head>
-<body>
+{% extends "base.html" %}
+{% block start %}
 
-    <h1>This Server Is From Django</h1>
+<hr>
+
+  <div class="container-fluid px-3 mt-4">
+    <h1>   This Page Send an Email</h1>
+    <a href="{% url 'send_email' %}" class="btn btn-success">Send Email</a>
+  </div>
+    <hr>
 
     <a href="/Contact/">
     Contact
@@ -19,6 +16,7 @@
     <a href="/About/">
     About
     </a>
+    <hr>
     
    
 
@@ -37,7 +35,7 @@
     <td>{{people.name}}</td>
     <td>{{people.age}}</td>
 
-    <td {% if people.age <= 18 %} style="background:red" {% endif %}>
+    <td {% if people.age < 18 %} style="background:red" {% endif %}>
       
       {% if people.age >= 18 %}
       Yes
@@ -51,5 +49,4 @@
  
 </table>
     
-</body>
-</html>
+{% endblock %}
