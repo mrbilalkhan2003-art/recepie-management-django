@@ -8,20 +8,20 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
 
-    # 👇 Homepage → Login page
+    # Homepage → Login page
     path('', login_page, name="login_page"),
 
-    # 👇 Authentication
+    # Authentication
     path('login/', login_page, name="login_page"),
     path('register/', register_page, name="register"),
     path('logout/', logout_page, name="logout_page"),
 
-    # 👇 Recepie page (after login)
+    # Recepie page (after login)
     path('recepies/', recepies, name='recepies'),
     path('delete-recepie/<id>/', delete_recepie, name="delete_recepie"),
     path('update-recepie/<id>/', update_recepie, name="update_recepie"),
 
-    # 👇 Admin
+    #Admin
     path('admin/', admin.site.urls),
 
     # ------- COMMENTED ROUTES (not needed for deployment now) -------
