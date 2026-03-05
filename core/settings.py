@@ -128,7 +128,7 @@ import os
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
-STATICFILES_DIR = [
+STATICFILES_DIRS = [
     os.path.join(BASE_DIR , "public/static")
 ]
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
@@ -146,3 +146,11 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
+
+
+
+
+# Login redirect settings
+LOGIN_URL = '/'
+LOGIN_REDIRECT_URL = '/recepies/'
+LOGOUT_REDIRECT_URL = '/'
