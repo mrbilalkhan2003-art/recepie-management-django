@@ -21,7 +21,7 @@ A full-stack web application built using Django that allows users to manage reci
 
 ## Live Demo
 
-https://yourproject.onrender.com
+https://recepie-management-django.onrender.com
 
 ## GitHub Repository
 
