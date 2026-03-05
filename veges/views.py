@@ -3,6 +3,7 @@ from .models import *
 from django.contrib.auth.models import User
 from django.contrib import messages
 from django.contrib.auth import authenticate , login , logout
+
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 @login_required(login_url="/login/")
@@ -20,7 +21,7 @@ def recepies(request):
             recepie_name= recepie_name,
             recepie_description= recepie_description,
             )
-        return redirect('/recepies/')
+        return redirect('/recepies/')   
     queryset = Recepie.objects.all()
 
     if request.GET.get('search'):
@@ -30,6 +31,8 @@ def recepies(request):
     context = {'recepies': queryset}
     return render(request , 'recepies.html' , context)
 
+
+@login_required(login_url="/login/")
 def update_recepie(request, id):
     queryset = Recepie.objects.get(id = id)
     if request.method == "POST":
@@ -56,6 +59,7 @@ def update_recepie(request, id):
 
 
 
+@login_required(login_url="/login/")
 def delete_recepie(request, id):
     queryset = Recepie.objects.get(id = id)
     queryset.delete()
