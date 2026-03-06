@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-4%$&!x_1o72&um8!ha*n^y=*349#1aodp_#z-*6@k_%qep*#uj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['recepie-management-django.onrender.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
