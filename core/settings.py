@@ -28,9 +28,8 @@ DEBUG = False
 ALLOWED_HOSTS = ['*']
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://*.onrender.com"
+    "https://recepie-management-django.onrender.com"
 ]
-
 
 # Application definition
 
